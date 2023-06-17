@@ -1,0 +1,42 @@
+.App{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.usersContainer{
+    height: 100%;
+    width: 15%;
+    border: 2px solid red;
+    background-color: rgb(74,21,75);
+    display: flex;
+}
+
+.chatContainer{
+    height: 100%;
+    width: 85%;
+    border: 2px solid green;
+    position: relative;
+    transition: 1s;
+}
+
+.chat{
+    height: 75%;
+    width: 100%;
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.chatInput{
+    height: 25%;
+    width: 100%;
+    border: 2px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

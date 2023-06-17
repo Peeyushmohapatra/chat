@@ -1,0 +1,43 @@
+.usersCont{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+    gap: .7rem;
+    color: white;
+    cursor: pointer;
+}
+
+.usersname{
+    font-size: 0.8rem;
+}
+
+.list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.cross{
+    display: none;
+    font-size: .7rem;
+}
+
+.list:hover{
+    .cross{
+        display: flex;
+    }
+}
+
+.circle{
+    font-size: .5rem;
+}
+
+.tr{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}

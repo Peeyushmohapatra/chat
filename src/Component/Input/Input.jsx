@@ -1,55 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Input.css";
 import { data } from '../../JSONdata/json';
+import { getUsers } from '../Functions/function';
 
 
-const Input = () => {
-    const [boolean,setBoolean] = useState(false);
-    const [user,setData] = useState([])
-    function getCode(e){
-        if(e.target.value === ""){
-            setBoolean("")
-        }
-        else if(e.target.value.length === 1 && e.target.value[0] === "@"){
-            console.log("All");
-            setData("")
-            // console.log("Hello");
-            setBoolean(true)
-        }
-        else if(e.target.value.length > 1){
-            console.log("Filter");
-            setBoolean(false)
-            setData(data.filter((ele) => {
-                if(ele.name.toUpperCase().includes((e.target.value.slice(1)).toUpperCase())){
-                    return ele
-                }
-            }))
-        }
-        // console.log();
-    }
+const Input = ({setDisplay,setUsers,selectedUser}) => {
+
+    const [user,setData] = useState([]);
+    const [input,setInput] = useState("")
+
+    useEffect(() => {
+        setInput(selectedUser)
+    },[selectedUser])
   return (
-    <div>
-        <input onChange={(e) => {
-            getCode(e)
+    <div className='input'>
+        <input value={input} placeholder='Message'  onChange={(e) => {
+            setInput(e.target.value)
+            getUsers(e,setDisplay,setUsers,data)
         }} type="text"/>
-
-        {boolean ? 
-        <div>
-            {data.map((ele) => {
-                return (
-                    <p>{ele.name}</p>
-                )
-            })}
-        </div>
-        :  
-       user.length !== 0 ?  <div>
-       {user.map((ele) => {
-           return (
-               <p>{ele.name}</p>
-           )
-       })}
-   </div> : "Input"
-       }
     </div>
   )
 }

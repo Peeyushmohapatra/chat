@@ -100,7 +100,7 @@ export const data = [
   {
     id: "01392724-bde7-4a5b-a2a0-db41bc3e0273",
     name: "bilash null",
-    status: true,
+    status: false,
     type: "b2c",
     created_at: "2020-12-17T12:52:54.000000Z",
   },
