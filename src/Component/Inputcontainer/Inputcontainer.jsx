@@ -12,7 +12,6 @@ const Inputcontainer = ({setDisplay,setUsers,selectedUser}) => {
         <i class="fa-sharp fa-solid fa-italic"></i>
         </div>
         <div style={{fontFamily:italic}} className="bottomContainer">
-          hello
             <Input setDisplay={setDisplay} setUsers={setUsers} selectedUser={selectedUser}/>
         </div>
     </div>
